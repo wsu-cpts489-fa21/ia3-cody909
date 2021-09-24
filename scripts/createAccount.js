@@ -175,45 +175,69 @@ function createAccount(newAcct) {
     document.title = "Error: Create Account";
     if (!securityAnswerValid) { //Display name field is invalid
         acctSecurityAnswerErr.classList.remove("hidden");
+        acctSecurityAnswerInvalidSymbol.classList.remove("hidden");
+        acctSecurityAnswerValidSymbol.classList.add("hidden");
         acctSecurityAnswerErr.focus();
         firstFocusableCreateAccountItem = acctSecurityAnswerErr;
     } else {
         acctSecurityAnswerErr.classList.add("hidden");
+        acctSecurityAnswerInvalidSymbol.classList.add("hidden");
+        acctSecurityAnswerValidSymbol.classList.remove("hidden");
     }
     if (!securityQuestionValid) { //Display name field is invalid
         acctSecurityQuestionErr.classList.remove("hidden");
+        acctSecutiryQuestionInvalidSymbol.classList.remove("hidden");
+        acctSecurityQuestionValidSymbol.classList.add("hidden");
         acctSecurityQuestionErr.focus();
         firstFocusableCreateAccountItem = acctSecurityQuestionErr;
     } else {
         acctSecurityQuestionErr.classList.add("hidden");
+        acctSecutiryQuestionInvalidSymbol.classList.add("hidden");
+        acctSecurityQuestionValidSymbol.classList.remove("hidden");
     } 
     if (!displayNameValid) { //Display name field is invalid
         acctDisplayNameErr.classList.remove("hidden");
+        acctDisplayNameInvalidSymbol.classList.remove("hidden");
+        acctDisplayNameValidSymbol.classList.add("hidden");
         acctDisplayNameErr.focus();
         firstFocusableCreateAccountItem = acctDisplayName;
     } else {
+        acctDisplayNameValidSymbol.classList.remove("hidden");
+        acctDisplayNameInvalidSymbol.classList.add("hidden");
         acctDisplayNameErr.classList.add("hidden");
     } 
     if (!repeatPasswordValid) { //Password repeat field is invalid
         acctPasswordRepeatErr.classList.remove("hidden");
+        acctPasswordRepeatInvalidSymbol.classList.remove("hidden");
+        acctPasswordReapeatValidSymbol.classList.add("hidden");
         acctPasswordRepeatErr.focus();
         firstFocusableCreateAccountItem = acctPasswordRepeatErr;
     } else {
         acctPasswordRepeatErr.classList.add("hidden");
+        acctPasswordRepeatInvalidSymbol.classList.add("hidden");
+        acctPasswordReapeatValidSymbol.classList.remove("hidden");
     } 
     if (!passwordValid) { //Password field is invalid
         acctPasswordErr.classList.remove("hidden");
+        acctPasswordInvalidSymbol.classList.remove("hidden"); 
+        acctPasswordValidSymbol.classList.add("hidden");       
         acctPasswordErr.focus();
         firstFocusableCreateAccountItem = acctPasswordErr;
     } else {
         acctPasswordErr.classList.add("hidden");
+        acctPasswordInvalidSymbol.classList.add("hidden");
+        acctPasswordValidSymbol.classList.remove("hidden");
     } 
     if (!emailValid) { //Email field is invalid
         acctEmailErr.classList.remove("hidden");
+        acctEmailInvalidSymbol.classList.remove("hidden");
+        acctEmailValidSymbol.classList.add("hidden");
         acctEmailErr.focus();
         firstFocusableCreateAccountItem = acctEmailErr;
     } else {
         acctEmailErr.classList.add("hidden");
+        acctEmailInvalidSymbol.classList.add("hidden");
+        acctEmailValidSymbol.classList.remove("hidden");
     }
  });
 
