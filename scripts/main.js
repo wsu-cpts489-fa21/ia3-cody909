@@ -79,6 +79,18 @@ const acctPasswordRepeatErr = document.getElementById("acctPasswordRepeatError")
 const acctDisplayNameErr = document.getElementById("acctDisplayNameError");
 const acctSecurityQuestionErr = document.getElementById("acctSecurityQuestionError");
 const acctSecurityAnswerErr = document.getElementById("acctSecurityAnswerError");
+const acctEmailValidSymbol = document.getElementById("acctEmailValidSymbol");
+const acctEmailInvalidSymbol = document.getElementById("acctEmailInvalidSymbol");
+const acctPasswordValidSymbol = document.getElementById("acctPasswordValidSymbol");
+const acctPasswordInvalidSymbol = document.getElementById("acctPasswordInvalidSymbol");
+const acctPasswordReapeatValidSymbol = document.getElementById("acctPasswordReapeatValidSymbol");
+const acctPasswordRepeatInvalidSymbol = document.getElementById("acctPasswordRepeatInvalidSymbol");
+const acctDisplayNameValidSymbol = document.getElementById("acctDisplayNameValidSymbol");
+const acctDisplayNameInvalidSymbol = document.getElementById("acctDisplayNameInvalidSymbol");
+const acctSecurityQuestionValidSymbol = document.getElementById("acctSecurityQuestionValidSymbol");
+const acctSecutiryQuestionInvalidSymbol = document.getElementById("acctSecutiryQuestionInvalidSymbol");
+const acctSecurityAnswerValidSymbol = document.getElementById("acctSecurityAnswerValidSymbol");
+const acctSecurityAnswerInvalidSymbol = document.getElementById("acctSecurityAnswerInvalidSymbol");
 
 //Default profile picture
 defaultProfilePic = "../images/DefaultProfilePic.jpg";

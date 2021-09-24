@@ -276,16 +276,20 @@
         </p>
         <form id="createAccountForm" class="centered" novalidate>
           <div class="mb-3">
+            <span id="acctEmailValidSymbol"  class="hidden" style="color: green;">&#10003;</span>
+            <span id="acctEmailInvalidSymbol" class="hidden" style="color: red;"> &#10007;</span>
             <label for="acctEmail" class="form-label">Email:<br/>
                 <input id="acctEmail" type="email" class="form-control centered"
                 aria-describedby="acctEmailDescr"
                 required>
             </label>
             <div id="acctEmailDescr" class="form-text">
-              Enter a valid email address (e.g., 'name@domain.com').
+              Enter a valid email address (e.g., 'name@domain.com'). 
             </div>
           </div>
           <div class="mb-3">
+            <span id="acctPasswordValidSymbol"  class="hidden" style="color: green;">&#10003;</span>
+            <span id="acctPasswordInvalidSymbol" class="hidden" style="color: red;"> &#10007;</span>
             <label for="password" class="form-label">Password:<br/>
                 <input id="acctPassword" type="password" class="form-control centered"
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
@@ -298,6 +302,8 @@
             </div>
           </div>
           <div class="mb-3">
+            <span id="acctPasswordReapeatValidSymbol"  class="hidden" style="color: green;">&#10003;</span>
+            <span id="acctPasswordRepeatInvalidSymbol" class="hidden" style="color: red;"> &#10007;</span>
             <label for="acctPasswordRepeat" class="form-label">Repeat Password:<br/>
                 <input id="acctPasswordRepeat" type="password" class="form-control centered"
                 aria-describedby="acctPasswordRepeatDescr"
@@ -308,6 +314,8 @@
             </div>
           </div>
           <div class="mb-3">
+            <span id="acctDisplayNameValidSymbol"  class="hidden" style="color: green;">&#10003;</span>
+            <span id="acctDisplayNameInvalidSymbol" class="hidden" style="color: red;"> &#10007;</span>
             <label for="acctDisplayName" class="form-label">Display Name:<br/>
                 <input id="acctDisplayName" type="text" class="form-control centered"
                 minlength="5"
@@ -332,6 +340,8 @@
             </div>
           </div>
           <div class="mb-3">
+            <span id="acctSecurityQuestionValidSymbol"  class="hidden" style="color: green;">&#10003;</span>
+            <span id="acctSecutiryQuestionInvalidSymbol" class="hidden" style="color: red;"> &#10007;</span>
             <label for="acctSecurityQuestion" class="form-label">Security Question:<br/>
                 <input id="acctSecurityQuestion" type="text" class="form-control centered"
                 minlength="5"
@@ -344,6 +354,8 @@
             </div>
           </div>
           <div class="mb-3">
+            <span id="acctSecurityAnswerValidSymbol"  class="hidden" style="color: green;">&#10003;</span>
+            <span id="acctSecurityAnswerInvalidSymbol" class="hidden" style="color: red;"> &#10007;</span>
             <label for="acctSecurityAnswer" class="form-label">Answer to Security Question:<br/>
                 <input id="acctSecurityAnswer" type="text" class="form-control centered"
                 minlength="5"
