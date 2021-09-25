@@ -115,7 +115,8 @@ function createAccount(newAcct) {
     createAccountDialog.classList.add("hidden");
     loginPage.classList.remove("hidden");
     accountCreatedEmail.textContent = newAcct.email;
-    accountCreated.classList.remove("hidden");
+    //accountCreated.classList.remove("hidden");
+    $('#accountCreatedToast').toast('show');
 }
 
 /*************************************************************************
