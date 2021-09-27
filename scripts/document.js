@@ -17,14 +17,15 @@
     else if (sideMenu.contains(document.activeElement)) {
         keyDownMenuItemFocused(e.code);
     }
-    else if (document.activeElement.getAttribute("role") 
-               === "tab") {
+    else if (modeTabsContainer.contains(document.activeElement)) {
         //User is pressing a key when mode tab is focused
-        keyDownModeTabFocused(e.code); 
-    } else if (document.activeElement.classList
+        keyDownModeTabFocused(e.code)
+    }
+    else if (document.activeElement.classList
         .contains("action-dialog")) {
             keyDownDialogFocused(e);
-    } else if (createAccountDialog.contains(document.activeElement)) {
+    } 
+    else if (createAccountDialog.contains(document.activeElement)) {
         keyDownCreateDialogFocused(e);
     }    
  });
