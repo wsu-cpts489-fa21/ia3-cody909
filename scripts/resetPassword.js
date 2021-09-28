@@ -32,8 +32,10 @@ function updatePassword() {
     document.title = "Log In to SpeedScore";
     resetPasswordActionDialog.classList.add("hidden");
     loginPage.classList.remove("hidden");
+    toastHeader.textContent = "Password Reset";
+    toastBody.textContent = "Your password has been updated, you can now login with your new password.";
     loginPageToasts.classList.remove("hidden");
-    $('#passwordResetToast').toast('show');
+    $('#loginPageToast').toast('show');
 }
 
 

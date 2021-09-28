@@ -59,6 +59,7 @@ const resetPasswordBtn = document.getElementById("resetPasswordBtn");
 const accountCreated = document.getElementById("accountCreated");
 const accountCreatedClose = document.getElementById("accountCreatedClose");
 const accountCreatedEmail = document.getElementById("accountCreatedEmail")
+const accountCreatedToastBody = document.getElementById("accountCreatedToastBody")
 
 //Global variables to provide easy access to Create Account Dialog elements
 const createAccountDialog = document.getElementById("createAccountDialog");
@@ -105,7 +106,7 @@ const newPasswordError = document.getElementById("resetPasswordError");
 const newPasswordRepeatField = document.getElementById("newPasswordRepeat");
 const newPasswordRepeatError = document.getElementById("resetPasswordError");
 
-const loginPageToasts = document.getElementById("loginPageToasts");
-
+const toastBody = document.getElementById("toastBody")
+const toastHeader = document.getElementById("toastHeader")
 //Default profile picture
 defaultProfilePic = "../images/DefaultProfilePic.jpg";
