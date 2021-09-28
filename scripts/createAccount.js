@@ -219,7 +219,11 @@ function createAccount(newAcct) {
     } else {
         acctPasswordRepeatErr.classList.add("hidden");
         acctPasswordRepeatInvalidSymbol.classList.add("hidden");
-        acctPasswordReapeatValidSymbol.classList.remove("hidden");
+        if (passwordValid) {
+            acctPasswordReapeatValidSymbol.classList.remove("hidden");
+        } else {
+            acctPasswordRepeatInvalidSymbol.classList.remove("hidden");
+        }
     } 
     if (!passwordValid) { //Password field is invalid
         acctPasswordErr.classList.remove("hidden");
