@@ -20,4 +20,4 @@ Here are links to the issues associated with the tasks that I completed in this 
 Copy/paste yourIA reflection post from Canvas here.
 
 ## Notes
-Include in this section any notes on your assignment solution that you would like to share privately with the TA and instructor. For example, you can explain any issues you had completing the assignment; ask questions; or provide any additional information that might help with the interpretation adn grading of your solution.
+Note some tests fail becuase of issues with testcafe. Its pressKey() function doesn't work properly and it has a problem with validating minimum input length requirement for the forms where it accepts input that does not meet minimum length requirement
