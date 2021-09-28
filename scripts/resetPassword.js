@@ -78,18 +78,17 @@ resetPasswordForm.addEventListener("submit", function(e) {
     if(!repeatPasswordValid) {
         newPasswordRepeatError.classList.remove("hidden");
     } else {
-        newPasswordRepeatError.classList.remove("hidden");
+        newPasswordRepeatError.classList.add("hidden");
     }
     if(!passwordValid) {
         newPasswordError.classList.remove("hidden");
     } else {
-        newPasswordError.classList.remove("hidden");
+        newPasswordError.classList.add("hidden");
     }
     if(!securityQuestionAnswerValid) {
         securityQuestionAnswerError.classList.remove("hidden");
     } else {
         securityQuestionAnswerError.classList.add("hidden");
-
     }
 })
 

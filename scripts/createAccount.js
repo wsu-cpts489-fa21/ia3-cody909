@@ -110,7 +110,7 @@ accountCreatedClose.addEventListener("click",function() {
   *************************************************************************/
 function createAccount(newAcct) {
     resetCreateAccountForm();
-    alert("New account created: " + JSON.stringify(newAcct));
+    //alert("New account created: " + JSON.stringify(newAcct));
     document.title = "Log In to SpeedScore";
     createAccountDialog.classList.add("hidden");
     loginPage.classList.remove("hidden");
@@ -219,7 +219,11 @@ function createAccount(newAcct) {
     } else {
         acctPasswordRepeatErr.classList.add("hidden");
         acctPasswordRepeatInvalidSymbol.classList.add("hidden");
-        acctPasswordReapeatValidSymbol.classList.remove("hidden");
+        if (passwordValid) {
+            acctPasswordReapeatValidSymbol.classList.remove("hidden");
+        } else {
+            acctPasswordRepeatInvalidSymbol.classList.remove("hidden");
+        }
     } 
     if (!passwordValid) { //Password field is invalid
         acctPasswordErr.classList.remove("hidden");
