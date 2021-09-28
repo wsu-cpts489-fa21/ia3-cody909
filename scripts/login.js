@@ -97,3 +97,6 @@ loginForm.addEventListener("submit",function(e) {
    } 
 });
 
+document.getElementById("loginPageToastDismissBtn").addEventListener("click", function(e) {
+    loginPageToasts.classList.add("hidden");
+})

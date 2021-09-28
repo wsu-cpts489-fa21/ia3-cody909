@@ -207,19 +207,21 @@
       </div>
       <div id="loginPage" class="mode-page">
         <h1 class="mode-page-header">Log In</h1>
+        <div id="loginPageToasts" class="hidden">
         <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
-        <div id="accountCreatedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+        <div id="loginPageToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
           <div class="toast-header">
-            <strong class="mr-auto">Account Created &nbsp;</strong>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <strong class="mr-auto"><span id="toastHeader">&nbsp;</strong>
+            <button id="loginPageToastDismissBtn" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="toast-body">
-            New account created with email <span id="accountCreatedEmail"></span>
+            <span id="toastBody">
           </div>
         </div>
         </div>
+      </div>
           <div id="accountCreated" class="toast-container hidden" role="alert" aria-atomic="true" aria-live="assertive">
              <div class="toast-text">
                 New account created with email <span id="accountCreatedEmail"></span>
@@ -398,6 +400,66 @@
           </div>
         </form>
       </div> 
+      <div id="resetPasswordActionDialog" class="mode-page hidden"
+            role ="dialog" aria-modal="true"
+            aria-labelledby="resetPasswordHeader">
+        <h1 id="resetPasswordHeader" class="centered">Reset Password</h1>
+        <p id="resetPasswordErrorBox" class="alert alert-danger centered hidden">
+          <a id="securityQuestionAnswerError" href="#securtyQuestionAnswer" class="alert-link">Enter the correct asnwer<br></a>
+          <a id="resetPasswordError" href="#acctPassword" class="alert-link">Enter a valid password<br></a>
+          <a id="resetPasswordRepeatError" href="#acctPasswordRepeat" class="alert-link">Repeated password must match<br/></a>
+        </p>
+        <form id="resetPasswordForm" class="centered" novalidate>
+          <div class="mb-3">
+            <div id="securityQuestion" class="centered">Security Question: Who is the greatest NFL player of all time?</div>
+            <label for="securityQuestionAnswer" class="form-label">Answer to secuirty question:<br/>
+              <input id="securityQuestionAnswer" type="text" class="form-control centered"
+              aria-describedby="securityQuestionAnswerDescr">
+            </label>
+            <div id="securityQuestionAnswerDescr" class="form-text">
+              Your secuirty questoin answer must match what you entered when creating your account
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="newPassword" class="form-label">New Passowrd:<br/>
+                <input id="newPassword" type="password" class="form-control centered"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                aria-describedby="newPasswordDescr"
+                required>
+            </label>
+            <div id="newPasswordDescr" class="form-text">
+              Passwords must be at least 8 characters long with at least one number, 
+              one lower case letter, and one upper case letter.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="newPasswordRepeat" class="form-label">Repeat Password:<br/>
+                <input id="newPasswordRepeat" type="password" class="form-control centered"
+                aria-describedby="newPasswordRepeatDescr"
+                required>
+            </label>
+            <div id="newPasswordRepeatDescr" class="form-text">
+              Re-enter password, making sure it exactly matches.
+            </div>
+          </div>
+          <div class="mode-page-btn-container">
+            <button type="submit" id="submitResetPasswordBtn" 
+                class="btn btn-primary dialog-primary-btn" 
+                aria-live="polite" aria-loading="false">
+              <span id="resetPasswordBtnIcon" 
+                class="fas fa-user-plus" 
+                aria-hidden="true"></span>
+                &nbsp;Reset Password
+            </button>
+            <button type="button" id="cancelResetPasswordBtn" 
+                class="btn btn-secondary dialog-cancel-btn">
+                <span class="fas fa-window-close" 
+                aria-hidden="true"></span>
+              &nbsp;Cancel
+            </button>
+          </div>
+          </form>
+      </div>
     </main>
     <script src="scripts/main.js"></script>
     <script src="scripts/sideMenu.js"></script>
@@ -406,6 +468,7 @@
     <script src="scripts/document.js"></script>
     <script src="scripts/login.js"></script>
     <script src="scripts/createAccount.js"></script>
+    <script src="scripts/resetPassword.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

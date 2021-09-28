@@ -114,9 +114,12 @@ function createAccount(newAcct) {
     document.title = "Log In to SpeedScore";
     createAccountDialog.classList.add("hidden");
     loginPage.classList.remove("hidden");
-    accountCreatedEmail.textContent = newAcct.email;
+    //accountCreatedEmail.textContent = newAcct.email;
+    toastHeader.textContent = "Account Created";
+    toastBody.textContent = "New account created with email: " + newAcct.email;
     //accountCreated.classList.remove("hidden");
-    $('#accountCreatedToast').toast('show');
+    loginPageToasts.classList.remove("hidden");
+    $('#loginPageToast').toast('show');
 }
 
 /*************************************************************************
