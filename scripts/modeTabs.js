@@ -26,6 +26,7 @@
     modeTabButtons[currentMode].setAttribute("aria-selected",false);
     modeTabButtons[newMode].classList.add("modetab-selected");
     modeTabButtons[newMode].setAttribute("aria-selected",true);
+    modeTabButtons[newMode].focus();
     //Switch tab panel
     modeTabPanels[currentMode].classList.add("hidden");
     modeTabPanels[newMode].classList.remove("hidden");
