@@ -104,7 +104,7 @@ const securityQuestionAnswerError = document.getElementById("securityQuestionAns
 const newPasswordField = document.getElementById("newPassword");
 const newPasswordError = document.getElementById("resetPasswordError");
 const newPasswordRepeatField = document.getElementById("newPasswordRepeat");
-const newPasswordRepeatError = document.getElementById("resetPasswordError");
+const newPasswordRepeatError = document.getElementById("resetPasswordRepeatError");
 
 const toastBody = document.getElementById("toastBody")
 const toastHeader = document.getElementById("toastHeader")
