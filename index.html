@@ -398,6 +398,48 @@
           </div>
         </form>
       </div> 
+      <div id="resetPasswordActionDialog" class="mode-page hidden"
+            role ="dialog" aria-modal="true"
+            aria-labelledby="resetPasswordHeader">
+        <h1 id="resetPasswordHeader">Reset Password</h1>
+        <p id="resetPasswordErrorBox" class="alert alert-danger centered hidden">
+          <a id="securityQuestionAnswerError" href="#securtyQuestionAnswer" class="alert-link">Enter the correct asnwer<br></a>
+          <a id="resetPasswordError" href="#acctPassword" class="alert-link">Enter a valid password<br></a>
+          <a id="resetPasswordRepeatError" href="#acctPasswordRepeat" class="alert-link">Repeated password must match<br/></a>
+        </p>
+        <form id="resetPasswordForm" class="centered" novalidate></form>
+          <div class="mb-3">
+            <label for="securityQuestionAnswer" class="form-label">Answer to secuirty question:<br/>
+              <input id="securityQuestionAnswer" type="text" class="form-control centered"
+              aria-describedby="securityQuestionAnswerDescr">
+            </label>
+            <div id="securityQuestionAnswerDescr" class="form-text">
+              Your secuirty questoin answer must match what you entered when creating your account
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="newPassword" class="form-label">New Passowrd:<br/>
+                <input id="newPassword" type="password" class="form-control centered"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                aria-describedby="newPasswordDescr"
+                required>
+            </label>
+            <div id="newPasswordDescr" class="form-text">
+              Passwords must be at least 8 characters long with at least one number, 
+              one lower case letter, and one upper case letter.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="newPasswordRepeat" class="form-label">Repeat Password:<br/>
+                <input id="newPasswordRepeat" type="password" class="form-control centered"
+                aria-describedby="newPasswordRepeatDescr"
+                required>
+            </label>
+            <div id="newPasswordRepeatDescr" class="form-text">
+              Re-enter password, making sure it exactly matches.
+            </div>
+          </div>
+      </div>
     </main>
     <script src="scripts/main.js"></script>
     <script src="scripts/sideMenu.js"></script>
