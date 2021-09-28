@@ -110,7 +110,7 @@ accountCreatedClose.addEventListener("click",function() {
   *************************************************************************/
 function createAccount(newAcct) {
     resetCreateAccountForm();
-    alert("New account created: " + JSON.stringify(newAcct));
+    //alert("New account created: " + JSON.stringify(newAcct));
     document.title = "Log In to SpeedScore";
     createAccountDialog.classList.add("hidden");
     loginPage.classList.remove("hidden");
