@@ -92,5 +92,20 @@ const acctSecutiryQuestionInvalidSymbol = document.getElementById("acctSecutiryQ
 const acctSecurityAnswerValidSymbol = document.getElementById("acctSecurityAnswerValidSymbol");
 const acctSecurityAnswerInvalidSymbol = document.getElementById("acctSecurityAnswerInvalidSymbol");
 
+//Global variables to provide access Reset Password Action Dialog elements
+const resetPasswordActionDialog = document.getElementById("resetPasswordActionDialog");
+const resetPasswordForm = document.getElementById("resetPasswordForm");
+const submitResetPasswordBtn = document.getElementById("submitResetPasswordBtn");
+const cancelResetPasswordBtn = document.getElementById("cancelResetPasswordBtn")
+const resetPasswordErrorBox = document.getElementById("resetPasswordErrorBox");
+const securityAnswerField = document.getElementById("securityQuestionAnswer");
+const securityQuestionAnswerError = document.getElementById("securityQuestionAnswerError");
+const newPasswordField = document.getElementById("newPassword");
+const newPasswordError = document.getElementById("resetPasswordError");
+const newPasswordRepeatField = document.getElementById("newPasswordRepeat");
+const newPasswordRepeatError = document.getElementById("resetPasswordError");
+
+const loginPageToasts = document.getElementById("loginPageToasts");
+
 //Default profile picture
 defaultProfilePic = "../images/DefaultProfilePic.jpg";
